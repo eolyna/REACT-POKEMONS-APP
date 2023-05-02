@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import PokemonsDetail from './pages/pokemon-detail';
 import PokemonEdit from './pages/pokemon-edit';
 import PokemonAdd from './pages/pokemon-add';
+import Login from './pages/login';
+// import PrivateRoute from './PrivateRoute';
 
   
 const App: FunctionComponent = () => {
@@ -18,7 +20,7 @@ const App: FunctionComponent = () => {
         </div> 
 </nav>
 <Routes>
-  
+<Route path="/login" element={<Login />} />
   <Route path="/" element={<PokemonList />} />
   <Route path="/pokemons" element={<PokemonList />} />
   <Route path="/pokemon/add" element={<PokemonAdd/>} />
